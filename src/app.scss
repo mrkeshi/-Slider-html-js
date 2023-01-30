@@ -1,0 +1,87 @@
+$bg-1:#3366FF;
+$bg-active:#FFE926;
+$bg-3:#254EDB;
+$bg-4:#ADC8FF;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    justify-content: center;
+    background-color: $bg-1;
+    .slider{
+        position: relative;
+        .dots{
+            position: absolute;
+            bottom: -75px;
+            z-index: 100;
+            display: flex;
+            height: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            span{
+                transition:all 0.3s ease;
+                cursor: pointer;
+                border-radius: 50%;
+                width: 15px;
+                background-color: white;
+                margin: 5px 5px;
+                height: 15px;
+            }span.active{
+                background-color: $bg-active;
+            }
+        }
+        .slide-container{
+            position: relative;  
+               overflow: hidden;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            width: 900px;
+            height: 500px;
+            margin:150px auto;
+            border: 8px solid white;
+       
+            .arrows{
+                span{
+                    // transform: translateX();
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                    transition:all 0.3s ease;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 10;
+                    transform: translateY(-50%);
+                    padding: 5px;
+                    background-color: $bg-4;
+                    color: #254EDB;
+                    cursor: pointer;
+                }
+                .arrow-right{
+                    right: 5px;
+                }
+                .arrow-left{
+                    left:5px
+                }
+            }
+        .slides{
+            height: 100%;
+            display: flex;
+            width: 100%;    
+             border-radius: 4px;
+    
+            .slide{                
+    
+                img{
+                    border-radius: 4px;
+                    height: 100%;
+                    width: 900px;
+                object-fit: cover;
+                }
+            }
+        }
+        }
+    }
+
+}
